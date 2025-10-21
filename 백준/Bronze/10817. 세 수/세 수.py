@@ -1,7 +1,10 @@
+a = []
 A, B, C = input().split()
 A = int(A)
 B = int(B)
 C = int(C)
-a = [A,B,C]
+a.append(A)
+a.append(B)
+a.append(C)
 a.sort()
 print(a[1])
