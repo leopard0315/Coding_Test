@@ -5,19 +5,17 @@ for h in range(1,R+1):
         for k in range(A):
             string = ""
             for i in range(1,C+1):
-                for j in range(B):
-                    if(i%2 == 1):
-                        string += "X"
-                    else:
-                        string += "."
+                if(i%2 == 1):
+                    string += "X" * B
+                else:
+                    string += "." * B
             print(string)
     else:
         for k in range(A):
             string = ""
             for i in range(1,C+1):
-                for j in range(B):
-                    if(i%2 == 1):
-                        string += "."
-                    else:
-                        string += "X"
+                if(i%2 == 1):
+                    string += "." * B
+                else:
+                    string += "X" * B
             print(string)
