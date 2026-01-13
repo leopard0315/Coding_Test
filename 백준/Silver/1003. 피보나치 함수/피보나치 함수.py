@@ -12,9 +12,7 @@ a = [1,0]
 b = [0,1]
 
 for i in range(2,d+1):
-    A = a[i-1] + a[i-2]
-    B = b[i-1] + b[i-2]
-    a.append(int(A))
-    b.append(int(B))
+    a.append(int(a[i-1] + a[i-2]))
+    b.append(int(b[i-1] + b[i-2]))
 for j in range(len(c)):
     print(a[c[j]] , b[c[j]])
