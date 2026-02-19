@@ -13,13 +13,12 @@ for _ in range(N):
 conf.sort(key = lambda x : (x[1], x[0]))
 
 # 회의 최대개수 구하기
-cnt = 1
+cnt = 1 # 기본 시작 회의 개수는 1개 이상
 k = 0
-a = [conf[0][1]]
-while(True):
-    for i in range(k+1,N):
-        if(conf[k][1] <= conf[i][0]):
-            cnt += 1
-            k = i
-    break
+for i in range(k+1,N):
+    if(conf[k][1] <= conf[i][0]):
+        cnt += 1
+        k = i
+
+# 회의 최대개수 출력
 print(cnt)
