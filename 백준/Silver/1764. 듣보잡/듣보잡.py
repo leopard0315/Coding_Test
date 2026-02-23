@@ -1,16 +1,18 @@
 # 백준 1764번
 # 듣보잡
+import sys
+input = sys.stdin.readline
 
 # 입력
-N, M = map(int,input().split())
+N, M = map(int,input().strip().split())
 n = set()
 intersection = set()
 
 for i in range(N):
-    name = input()
+    name = input().strip()
     n.add(name)
 for j in range(M):
-    name = input()
+    name = input().strip()
     if name in n :
         intersection.add(name)
 
