@@ -12,6 +12,7 @@ for _ in range(P):
     for i in range(2,21):
         for j in range(1,i+1):
             if(a[j] > a[i]):
+                # 배열에 특정 위치에 요소를 추가할때 -> insert(위치, 요소) 를 사용
                 b.insert(1,a[i])
                 walk_cnt += 1
 
