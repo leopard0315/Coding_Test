@@ -16,8 +16,8 @@ for i in range(N):
 
 # 누적합의 원소들을 M으로 나눈값을 다시 배열로 생성
 # 나머지 개수 세기
-reminder = [presum[i] % M for i in range(N+1)]
-count = Counter(reminder)
+remainder = [presum[i] % M for i in range(N+1)]
+count = Counter(remainder)
 
 # 같은 나머지끼리 조합해서 계산
 cnt = 0
