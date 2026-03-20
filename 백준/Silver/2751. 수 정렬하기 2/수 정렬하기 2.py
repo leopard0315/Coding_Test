@@ -1,4 +1,5 @@
 # 백준 2751번
+# 수 정렬하기2
 
 import sys
 input = sys.stdin.readline
@@ -15,5 +16,4 @@ for _ in range(N):
 a.sort()
 
 # 출력
-for i in range(N):
-    print(a[i])
+print('\n'.join(map(str,a)))
