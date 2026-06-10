@@ -1,7 +1,5 @@
 def solution(myString, pat):
-    myString = myString.lower()
-    pat = pat.lower()
-    if pat in myString:
+    if pat.lower() in myString.lower():
         return 1
     else: 
         return 0
