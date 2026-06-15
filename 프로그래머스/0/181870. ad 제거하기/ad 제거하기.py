@@ -1,10 +1,10 @@
 def solution(strArr):
     answer = []
-    for i in range(0,len(strArr)):
-        if 'ad' in strArr[i]:
+    for i in strArr:
+        if 'ad' in i:
             pass
         else:
-            answer.append(strArr[i])
+            answer.append(i)
             
     return answer
     
