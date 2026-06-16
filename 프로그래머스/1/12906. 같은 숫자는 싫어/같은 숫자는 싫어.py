@@ -11,5 +11,3 @@ def solution(arr):
                 answer.append(arr[i])
     return answer        
             
-                
-    return answer
