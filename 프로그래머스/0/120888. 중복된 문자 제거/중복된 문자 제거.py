@@ -1,12 +1,7 @@
 def solution(my_string):
-    a = list(my_string)
-    b = set()
     answer = ''
-    for i in range(len(a)):
-        if a[i] in b:
-            continue
-        else:
-            b.add(a[i])
-            answer += a[i]
+    for i in my_string: # 문자열안에 각 문자가 
+        if i not in answer: # answer안에 없을때 추가한다.
+            answer += i
     return answer
     
