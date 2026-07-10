@@ -3,7 +3,4 @@ def solution(numbers):
     numbers.sort() # 오름차순 정렬
     a1 = numbers[-1] * numbers[-2]
     a2 = numbers[0] * numbers[1]
-    if a1 > a2:
-        return a1
-    else:
-        return a2
+    return max(a1,a2)
