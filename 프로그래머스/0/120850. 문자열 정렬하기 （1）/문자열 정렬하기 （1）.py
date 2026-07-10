@@ -1,7 +1,5 @@
 def solution(my_string):
-    answer = [int(c) for c in my_string if c.isdigit()]
-    answer.sort() # 정렬
-    return answer
+    return sorted([int(c) for c in my_string if c.isdigit()])
 
 # 숫자만 뽑기
 # a.isdigit() 사용
