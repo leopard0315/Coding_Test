@@ -3,13 +3,14 @@ def solution(quiz):
     result = []
     for i in range(len(quiz)):
         array = quiz[i].split('=')
-        array1 = array[0].split(' ')
-        if array1[1] == '+' :
-            res = int(array1[0]) + int(array1[2])
-        else :
-            res = int(array1[0]) - int(array1[2])
+        a = array[0].split(' ')
         b = array[1].strip() 
         
+        if a[1] == '+' :
+            res = int(a[0]) + int(a[2])
+        else :
+            res = int(a[0]) - int(a[2])
+    
         if res == int(b):
             result.append('O')
         else:
