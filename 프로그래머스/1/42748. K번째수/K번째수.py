@@ -1,12 +1,13 @@
 def solution(array, commands):
     answer = []
-    for i in commands:
+    for components in commands:
         # 배열 슬라이싱
-        new_list = array[i[0]-1:i[1]]
+        i,j,k = components
+        new_list = array[i-1:j]
         
         # 정렬
         new_list.sort()
         
         # 원소 추가
-        answer.append(new_list[i[2]-1])
+        answer.append(new_list[k-1])
     return answer
