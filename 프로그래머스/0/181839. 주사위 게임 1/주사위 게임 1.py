@@ -5,5 +5,6 @@ def solution(a, b):
     # 2) a와 b 모두 홀수가 아닐때
     elif a % 2 == 0 and b % 2 == 0:
         return abs(a-b)
+    # 3) a와 b 중에 한개만 홀수일때
     else:
         return 2 * (a+b)
