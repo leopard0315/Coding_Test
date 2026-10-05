@@ -8,3 +8,7 @@ def solution(num_list, n):
         
     # 정답 출력
     return answer
+
+# 다른 사람 풀이
+# def solution(num_list, n):
+#     return num_list[::n]
