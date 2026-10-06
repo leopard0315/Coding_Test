@@ -7,13 +7,8 @@ def solution(arr, intervals):
     y1 = intervals[0][1]
     y2 = intervals[1][1]
     
-    # 3. 구간에 따른 각 인덱스의 값들을 answer배열에 추가하기
-    # 3-1. 첫번째 구간 인덱스의 원소들 추가
-    for i in range(x1,y1+1):
-        answer.append(arr[i])
-    # 3-2. 두번째 구간 인덱스의 원소들 추가
-    for j in range(x2,y2+1):
-        answer.append(arr[j])
+    # 3. 문자열 슬라이싱 이용해서 집어넣기
+    answer = arr[x1:y1+1] + arr[x2:y2+1]
     
-    # 4. 정답 배열 반환
+    # 4. 정답 배열 반환하기
     return answer
