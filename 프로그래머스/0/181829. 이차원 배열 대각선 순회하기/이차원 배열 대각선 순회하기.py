@@ -5,6 +5,4 @@ def solution(board, k): # board 이차원 배열, 정수 k
         for j in range(len(board[0])):
             if (i + j) <= k:
                 answer += board[i][j]
-            else:
-                continue
     return answer
