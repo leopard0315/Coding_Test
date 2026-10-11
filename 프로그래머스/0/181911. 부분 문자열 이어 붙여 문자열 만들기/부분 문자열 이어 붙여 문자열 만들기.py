@@ -1,7 +1,7 @@
 def solution(my_strings, parts):
     # 정답을 담을 변수 선언
     answer = ''
-    # my_strings을 각 넘버링 해주는 문자열
+    # my_strings을 각 넘버링 해주는 숫자 선언
     i = 0
     
     # parts의 원소를 s,e로 뽑아내서 my_strings의 각 원소들을 문자열 슬라이싱을 이용해서 잘라냄
