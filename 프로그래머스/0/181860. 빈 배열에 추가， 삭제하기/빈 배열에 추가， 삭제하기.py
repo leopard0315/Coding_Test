@@ -8,11 +8,10 @@ def solution(arr, flag):
     # flag[i]가 false인 경우 -> arr[i] 개수만큼 x배열 끝에서 빼기 
     for i in range(len(flag)):
         if flag[i] == True:
-            for j in range(arr[i] * 2):
-                X.append(arr[i])
-        elif flag[i] == False:
-            for j in range(arr[i]):
-                X.pop() 
+            X.extend([arr[i]] * arr[i] * 2) # extend()는 만약 배열이라면, 배열안에 원소들만을 추가해서 넣어준다.
+        else:
+            # arr[i]개 만큼 뒤에서 원소 제거(1. pop()반복, 2. 문자열 슬라이싱 이용)
+            del X[len(X)-arr[i]:]
  
     # X배열 반환하기
     return X
