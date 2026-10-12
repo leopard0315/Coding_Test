@@ -1,4 +1,5 @@
 def solution(strArr):
+    # 가장 큰 개수의 그룹의 크기 출력 -> max값 이용
     # 딕셔너리 생성
     answer = {}
     
@@ -11,8 +12,6 @@ def solution(strArr):
             
     # 딕셔너리의 value값을 기준으로 내림차순 정렬
     ans = sorted(answer.items(), key= lambda x:x[1],reverse = True)
-    
-    print(max(answer.values()))
     
     # 가장 맨 앞(가장 큰 값)의 value값 반환
     return ans[0][1]
