@@ -1,19 +1,18 @@
-# 경우의 수
-# 1) 리스트안에 아무것도 없을때 ) 오는 경우 cut
-# 2) 리스트안에 ( 개수와 )가 동일하지 않을때
-
 def solution(s):
-    a = []
+    # 올바른 괄호 : True, 올바르지않은 괄호 : False
+    stack = []
     
     for i in s:
+        # 1. stack이 비어있는데 ')'가 들어오는 경우
+        if len(stack) == 0 and i == ')':
+            return False
+        # 2. '('이 추가된 경우 - append()
         if i == '(':
-            a.append('(')
-        else :
-            if len(a) == 0:
-                return False
-            else:
-                a.pop()
-    if len(a) == 0:
-        return True
-    else:
-        return False
+            stack.append(i)
+        # 3. 이전 원소가 '('인데, 현재 원소가 ')'인 경우 - pop()
+        if i == ')' and stack[-1] == '(':
+            stack.pop()
+    
+    # stack이 비어있다면 True, 아니라면 False반환
+    return False if stack else True 
+    
