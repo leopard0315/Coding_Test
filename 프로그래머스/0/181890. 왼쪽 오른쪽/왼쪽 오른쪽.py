@@ -21,7 +21,7 @@ def solution(str_list):
     elif 'r' in str1:
         R = str1.index('r')
         return list(str1[R+1:])
-    elif 'l' not in str1 and 'r' not in str1:
+    else:
         return []
         
         
