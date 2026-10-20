@@ -6,7 +6,8 @@ def solution(str_list):
     
     # 문자는 index를 기준으로 index가 누가 더 작은지 비교해서 구한다.
     str1 = ''.join(str_list)
-    # l,r이 모두 있는 경우
+    
+    # 1. l,r이 모두 있는 경우
     if 'l' in str1 and 'r' in str1:
         L = str1.index('l')
         R = str1.index('r')
@@ -14,13 +15,17 @@ def solution(str_list):
             return list(str1[:L]) 
         else:
             return list(str1[R+1:])
-        
+    # 2. l만 있는 경우  
     elif 'l' in str1:
         L = str1.index('l')
         return list(str1[:L])
+    
+    # 3. r만 있는 경우
     elif 'r' in str1:
         R = str1.index('r')
         return list(str1[R+1:])
+    
+    # 4. l이랑 r 둘다 없는 경우
     else:
         return []
         
