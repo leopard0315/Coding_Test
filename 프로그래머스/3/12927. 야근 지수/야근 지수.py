@@ -3,21 +3,20 @@ import heapq
 def solution(n, works):
     answer = 0
     heap = []
-    for i in works:
-        heapq.heappush(heap,-i)
+    works = [-x for x in works]
+    heapq.heapify(works)
     
-    while(n!=0):
-        n -= 1
+    for _ in range(n):
         # 가장 큰 원소빼기
-        num = -heapq.heappop(heap)
+        num = heapq.heappop(works)
         # 1 감소하는데 0인경우 return
         if num == 0:
             return 0
         else:
-            num -= 1
+            num += 1
         # 해당값을 다시 힙에 추가
-        heapq.heappush(heap,-num)
+        heapq.heappush(works,num)
     
-    for i in heap:
+    for i in works:
         answer += i ** 2
     return answer
