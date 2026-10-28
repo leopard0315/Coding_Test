@@ -1,11 +1,22 @@
+# 1. 방법1
+# 방법1과 방법2 구현 원리는 동일하지만 방법1을 압축하고 불필요한 부분을 날리면 방법2가 된다.
 def solution(numlist, n):
-    answer = []
-    diff = []
+    answer = [] # 정답을 담을 배열
+    diff = [] # 거리 차이를 담을 배열 abs()사용해서 차이 구하기
+    
+    # 거리차이 담기
     for i in numlist:
         diff.append(abs(n-i))
-    arr = zip(numlist,diff)
-    arr = list(arr)
+    
+    # 거리와 해당 정수열을 zip함수로 묶고 리스트로 변환
+    arr = list(zip(numlist,diff))
+    
     arr.sort(key=lambda x:(x[1],-x[0]))
     for j in arr:
         answer.append(j[0])
+        
     return answer
+
+# # 2. 방법2
+# def solution(numlist, n):
+#     return sorted(numlist, key=lambda x:(abs(n-x),-x))
