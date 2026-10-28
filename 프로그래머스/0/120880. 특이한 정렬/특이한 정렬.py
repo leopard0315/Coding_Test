@@ -11,10 +11,12 @@ def solution(numlist, n):
     # 거리와 해당 정수열을 zip함수로 묶고 리스트로 변환
     arr = list(zip(numlist,diff))
     
+    # key=lambda를 사용해서 거리차이가 작은 숫자 먼저 정렬, 값이 같다면, 숫자가 더 큰 숫자를이후에 오도록 내림차순 정렬 진행
     arr.sort(key=lambda x:(x[1],-x[0]))
+    
+    # 정렬된 arr에 대하여 numlist값만을 반환
     for j in arr:
         answer.append(j[0])
-        
     return answer
 
 # # 2. 방법2
