@@ -6,30 +6,18 @@ def solution(polynomial):
     
     # 일차항 계수와 상수항 구하기
     for i in poly_1:
-        # 일차항의 계수 구하기
-        if 'x' in i:
-            # x인 경우
-            if i == 'x':
-                coe += 1
-            # 2x이상인 경우
-            else:
-                coe += int(i[:-1])
-        # 상수항 구하기
-        else:
+        if i.isdigit(): # 상수항
             num += int(i)
+        else: # 일차항 계수
+            coe = coe + 1 if i == 'x' else coe + int(i[:-1])
 
     # 출력하기
     # 계수가 0인 경우
     if coe == 0:
         return str(num)
     # 계수가 1인 경우
-    coe_str=''
-    if coe == 1:
-        coe_str = 'x'
-    else:
-        coe_str = str(coe) + 'x'
+    elif coe == 1:
+        return 'x' + ' + ' + str(num) if num != 0 else 'x'
     # 계수가 0,1이 아닌 경우
-    if num == 0:
-        return coe_str
     else:
-         return coe_str +  ' + ' + str(num)
+        return str(coe) + 'x + ' + str(num) if num !=0 else str(coe) + 'x'
