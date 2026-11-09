@@ -29,6 +29,3 @@ def solution(a, b, c, d):
     else:
         return A[0]
     
-        
-        
-    return score
