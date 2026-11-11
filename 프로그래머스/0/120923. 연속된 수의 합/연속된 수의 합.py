@@ -3,23 +3,27 @@ def solution(num, total):
     a = []
     # num이 홀수인 경우
     if num % 2 != 0:
+        # 중간값
         num1 = total // num
+        # 중간값 기준 왼쪽
         for i in range(num1-1,num1 - (num-1)//2-1,-1):
             a.append(i)
-        print(a)
+        # 중간값 기준 오른쪽
         for j in range(num1,num1 + (num-1)//2+1 ):
             a.append(j)
-        print(a)
             
     # num이 짝수인 경우
     else:
+        # 중간값
         num1 = total // num # 3
+        # 중간값 기준 왼쪽
         for i in range(num1,num1 - num//2, -1):
             a.append(i)
-        print(a)
+        # 중간값 기준 오른쪽
         for j in range(num1+1,num1+1 + num //2 ):
             a.append(j)
-        print(a)
-        
+    
+    # 오름차순 정렬   
     a.sort()
+    # 정답 반환
     return a
