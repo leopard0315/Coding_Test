@@ -1,0 +1,21 @@
+import math
+def solution(a, b):
+    answer = 0
+    # 최대 공약수 구하기
+    Gcd = math.gcd(a,b)
+    
+    # 기약 분수로 표현
+    a = a // Gcd
+    b = b // Gcd
+    
+    # 분모의 소인수 2와 5만 존재하는지 확인
+    while(b % 5 == 0):
+        b = b // 5
+    while(b % 2 == 0):
+        b = b // 2
+    
+    # 분모가 1이 아니라면 무한소수
+    if b != 1:
+        return 2
+    else:
+        return 1
