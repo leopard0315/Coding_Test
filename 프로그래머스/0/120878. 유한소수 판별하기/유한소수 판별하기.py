@@ -1,11 +1,9 @@
 import math
 def solution(a, b):
-    answer = 0
     # 최대 공약수 구하기
     Gcd = math.gcd(a,b)
     
     # 기약 분수로 표현
-    a = a // Gcd
     b = b // Gcd
     
     # 분모의 소인수 2와 5만 존재하는지 확인
