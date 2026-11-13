@@ -9,7 +9,21 @@
 #                     answer += 1
 #     return answer
 
-from itertools import combinations
+# 방법2
+from itertools import combinations,permutations,product
 def solution(number):
+    
+    # 조합 : nCr -> combinations
     new = [sum(i) for i in combinations(number,3)]
     return new.count(0)
+    
+    # 알아두어야할 라이브러리 및 함수
+    # from itertools import permutations, combinations, productr
+    # 순열 : nPr -> permutations
+    # new1 = list(permutations(number,3))
+    # print(new1)
+    
+    # 중복순열 : product
+    # new2 = list(product(number,number,number))
+    # print(new2)
+    
