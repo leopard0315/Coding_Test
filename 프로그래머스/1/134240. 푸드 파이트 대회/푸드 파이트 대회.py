@@ -7,7 +7,7 @@
     # 2) 0을 넣는다.
     # 3) 앞의 문자열을 뒤집어서 더한다. - reverse()함수를 이용해서 뒤집는다.
     
-# 방법1 - reverse함수 사용해서 뒤집기
+# 방법1 - reverse()함수 사용해서 뒤집기
 def solution(food):
     answer = ''
     # '0'전까지의 문자열을 구한다.
@@ -20,3 +20,13 @@ def solution(food):
     
     # 문자열 합치기
     return answer + '0' + ''.join(l_ans)
+
+# 방법2 - 문자열 슬라이싱[::-1] 해주기
+def solution(food):
+    answer = ''
+    # '0'전까지의 문자열을 구한다.
+    for i in range(1,len(food)):
+        answer += str(i) * (food[i]//2)
+        
+    # 문자열 슬라이싱이용해서 바로 뒤집기
+    return answer + '0' + answer[::-1]
