@@ -1,51 +1,29 @@
 # '': 공백(0), # : 벽(1)
 # 지도 n * n
-# 
 def solution(n, arr1, arr2):
-    ans = []
+    ans = [] # 정답 배열 선언
     for i in range(n):
-        # or 연산 진행해서 값 구하기
+        # or 연산 진행해서 값 합치기
         Num = arr1[i] | arr2[i]
 
-        # 앞에 '0'이 부족한 경우, 0 채우기
-        if len(bin(Num)[2:]) != n:
-            str_num = '0' * (n-len(bin(Num)[2:]))  + str(bin(Num)[2:])
+        # 합친값이 앞에 '0'이 부족한 경우, 부족한 '0' 채우기
+        b_Num = bin(Num)[2:]
+        if len(b_Num) != n:
+            str_num = '0' * (n-len(b_Num))  + str(b_Num)
         else:
-            str_num = str(bin(Num)[2:])
-    
-        print(str_num)
-        
+            str_num = str(b_Num)
+            
+        # 해당 문자열을 1:'#', 0:' '으로 변환하기
         s = ''
         for c in str_num:
             if c == '1':
                 s += '#'
             else:
                 s += ' '
-        print(s)
+                
+        # 정답 배열에 추가하기
         ans.append(s)
+        
+    # 정답 배열 반환
     return ans
-        
-#         num = bin(arr1[i])
-#         num2 = bin(arr2[i])
-#         len_num = len(num)
-#         len_num2 = len(num2)
-        
-#         # 길이가 n자리인경우 / 길이가 n자리 미만인경우
-#         if len_num == (n+2):
-#             str_num = str(num[2:])
-#         else:
-#             # n = 5, len()
-#             str_num = '0' * (n+2-len_num) + str(num[2:])
-        
-#         if len_num2 == (n+2):
-#             str_num2 = str(num2[2:])
-#         else:
-#             # n = 5, len()
-#             str_num2 = '0' * (n+2-len_num2) + str(num2[2:])
-            
-#         arr1_1.append(str_num)
-#         arr2_1.append(str_num2)
-            
-#     print(arr1_1)
-#     print(arr2_1)
     
