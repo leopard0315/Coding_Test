@@ -1,6 +1,7 @@
 def solution(spell, dic):
 #     ## 아이디어: spell을 오름차순한 배열과 dic배열 사이에 문자열을 배열로 변환하여 오름차순 정렬한 배열과 일치하는 배열 찾기
-    
+
+#     # 방법1
 #     # spell 오름차순 정렬
 #     spell.sort() 
     
@@ -13,6 +14,7 @@ def solution(spell, dic):
 #             return 1
 #     return 2
 
+#   # 방법2
     # 문자열의 길이 먼저 동일한지 확인
     len_spell = len(spell)
     for i in dic:
