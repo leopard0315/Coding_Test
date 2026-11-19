@@ -5,8 +5,7 @@ def solution(number, limit, power):
     # 약수 먼저 찾기
     measure = []
     
-    # 시간 초과가 났던 부분
-    # 
+    # 불필요한 연산 삭제 진행
     for i in range(1,number+1):
         count = 0
         for j in range(1,math.isqrt(i)+1):
@@ -17,7 +16,8 @@ def solution(number, limit, power):
                     count += 1
                 else:
                     count += 2
-                    
+        
+        # count값이 제한 조건보다 큰지 확인한다. 크다면 power, 작거나 같다면 그대로 유지
         measure.append(count if count <= limit else power)
     
     return sum(measure)
