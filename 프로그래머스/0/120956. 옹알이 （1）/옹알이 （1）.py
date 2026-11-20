@@ -13,21 +13,13 @@ def solution(babbling):
         elif length == 8: # 3 3 2
             if 'aya' in i:
                 if 'woo' in i:
-                    if 'ye' in i:
+                    if 'ye' in i or 'ma' in i:
                         count += 3
-                    elif 'ma' in i:
-                        count += 3
-                    else:
-                        pass
         elif length == 7:
             if 'ye' in i:
                 if 'ma' in i:
-                    if 'woo' in i:
+                    if 'woo' in i or 'aya' in i:
                         count +=3
-                    elif 'aya' in i:
-                        count += 3
-                    else:
-                        pass
         elif length == 6:
             if 'aya' in i:
                 if 'woo' in i:
