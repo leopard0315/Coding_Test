@@ -1,15 +1,11 @@
-# 백준 28279번
-# 덱2
+from collections import deque
 
 import sys
 input = sys.stdin.readline
-from collections import deque
+N =int(input())
 d = deque()
-
-N = int(input())
 for _ in range(N):
     order = list(map(int,input().split()))
-    # 명령 8가지
     if order[0] == 1:
         d.appendleft(order[1])
     elif order[0] == 2:
