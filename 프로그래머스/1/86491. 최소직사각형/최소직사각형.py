@@ -2,13 +2,13 @@
 def solution(sizes):
     answer = 0
     Max1, Max2 = 0 , 0
-    for i in range(len(sizes)):
-        if sizes[i][0] < sizes[i][1]:
-            sizes[i][0], sizes[i][1] = sizes[i][1], sizes[i][0]
+    for w,h in sizes:
+        if w < h:
+            w, h = h, w
         
-        if Max1 < sizes[i][0]:
-            Max1 = sizes[i][0]
-        if Max2 < sizes[i][1]:
-            Max2 = sizes[i][1]    
+        if Max1 < w:
+            Max1 = w
+        if Max2 < h:
+            Max2 = h   
     
     return Max1 * Max2
